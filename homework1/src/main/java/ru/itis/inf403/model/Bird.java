@@ -1,10 +1,12 @@
 package ru.itis.inf403.model;
 
 public class Bird extends Animal {
-    private double wingspan;
-    public Bird(String name, double wingspan) {
-        super(name);
+    protected double wingspan;
+    protected double height;
+    public Bird(String name, int age, double wingspan, double height) {
+        super(name,age);
         this.wingspan = wingspan;
+        this.height = height;
     }
 
     public Bird() {
@@ -18,7 +20,20 @@ public class Bird extends Animal {
         return wingspan;
     }
 
-    public void chirp() {
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void makeSound() {
         System.out.println("Chirp!");
     }
+
+    public void heightIncrease() {
+        height+=100;
+    }
+
 }

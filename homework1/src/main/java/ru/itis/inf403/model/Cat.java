@@ -1,9 +1,9 @@
 package ru.itis.inf403.model;
 
 public class Cat extends Animal {
-    private boolean isDomestic;
-    public Cat(String name, boolean isDomestic) {
-        super(name);
+    protected boolean isDomestic;
+    public Cat(String name,int age, boolean isDomestic) {
+        super(name,age);
         this.isDomestic = isDomestic;
     }
 
@@ -18,7 +18,11 @@ public class Cat extends Animal {
         isDomestic = domestic;
     }
 
-    public void meow() {
+    public void makeSound() {
         System.out.println("Meow!");
+    }
+
+    public void tame() {
+        isDomestic = true;
     }
 }

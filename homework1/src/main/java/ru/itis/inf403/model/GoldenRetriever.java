@@ -1,8 +1,8 @@
 package ru.itis.inf403.model;
 
 public class GoldenRetriever extends Dog {
-    public GoldenRetriever(String name) {
-        super(name);
+    public GoldenRetriever(String name, int age, boolean isTrained) {
+        super(name, age, isTrained);
     }
 
     public GoldenRetriever() {

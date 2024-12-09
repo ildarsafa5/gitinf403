@@ -1,8 +1,8 @@
 package ru.itis.inf403.model;
 
 public class GermanShepherd extends Dog {
-    public GermanShepherd(String name) {
-        super(name);
+    public GermanShepherd(String name, int age, boolean isTrained) {
+        super(name,age,isTrained);
     }
 
     public GermanShepherd() {
