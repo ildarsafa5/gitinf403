@@ -11,6 +11,30 @@ public class Ant extends Entity {
 
     @Override
     public void move() {
+        int direction = (int) (Math.random()*4);
+        switch (direction) {
+            case 0:
+                if (y>0) {
+                    --y;
+                }
+                break;
+            case 1:
+                if (x<fieldHeight) {
+                    ++x;
+                }
+                break;
+            case 2:
+                if (y<fieldWidth) {
+                    ++y;
+                }
+                break;
+            case 3:
+                if (x>0) {
+                    --x;
+                }
+                break;
+
+        }
 
     }
 
