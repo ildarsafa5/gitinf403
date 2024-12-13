@@ -1,43 +1,39 @@
 package ru.itis.inf403.model;
 
-
-public class Ant extends Entity {
-    public Ant() {
+public class Tortoise extends Entity {
+    public Tortoise() {
 
     }
 
-    public Ant(int x, int y) {
-        super("Муравей", x, y);
+    public Tortoise(int x, int y) {
+        super("Черепаха", x, y);
     }
 
-    @Override
     public void move() {
         int direction = (int) (Math.random()*4);
         switch (direction) {
             case 0:
                 if (y>0) {
-                    --y;
+                    y-=2;
                 }
                 break;
             case 1:
-                if (x<fieldWidth) {
-                    ++x;
+                if (x>0) {
+                    x-=2;
                 }
                 break;
             case 2:
                 if (y<fieldHeight) {
-                    ++y;
+                    y+=2;
                 }
                 break;
             case 3:
-                if (x>0) {
-                    --x;
+                if (x<fieldWidth) {
+                    x+=2;
                 }
                 break;
-
         }
         ++cnt;
 
     }
-
 }

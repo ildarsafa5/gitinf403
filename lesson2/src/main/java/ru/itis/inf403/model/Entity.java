@@ -6,6 +6,7 @@ public class Entity {
     protected int y;
     protected static int fieldWidth;
     protected static int fieldHeight;
+    protected int cnt = 0;
 
     public Entity() {
 
@@ -46,7 +47,7 @@ public class Entity {
     }
 
     public String toString() {
-        return name + " (" + x + "," + y+") ";
+        return name + " (" + x + "," + y+") " + "за "+cnt + " ходов";
     }
 
     public void move() {
