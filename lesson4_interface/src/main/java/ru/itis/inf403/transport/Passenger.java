@@ -1,13 +1,13 @@
-package ru.itis.inf403;
+package ru.itis.inf403.transport;
 
-public class City {
+public class Passenger {
     String name;
 
-    public City() {
+    public Passenger() {
 
     }
 
-    public City(String name) {
+    public Passenger(String name) {
         this.name = name;
     }
 
@@ -16,3 +16,5 @@ public class City {
         return name;
     }
 }
+
+

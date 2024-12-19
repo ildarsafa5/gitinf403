@@ -1,9 +1,5 @@
 package ru.itis.inf403.transport;
 
-import ru.itis.inf403.City;
-import ru.itis.inf403.Passenger;
-import ru.itis.inf403.TransportAction;
-
 public class Ship implements TransportAction {
     private String name;
 

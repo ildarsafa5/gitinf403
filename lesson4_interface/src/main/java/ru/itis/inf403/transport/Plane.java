@@ -1,9 +1,5 @@
 package ru.itis.inf403.transport;
 
-import ru.itis.inf403.City;
-import ru.itis.inf403.Passenger;
-import ru.itis.inf403.TransportAction;
-
 public class Plane implements TransportAction {
     private int bortNumber;
     public void move(City cityFrom, City cityTo, Passenger passenger) {
