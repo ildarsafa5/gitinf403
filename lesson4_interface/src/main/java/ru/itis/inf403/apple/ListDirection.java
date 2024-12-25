@@ -27,15 +27,18 @@ public class ListDirection {
             for (int i = 1; i < position; i++) {
                 current = current.next;
             }
-            Node prevPositionNode = current;  // ЗАКОНЧИЛ ЗДЕСЬ
+            Node prevPositionNode = current;
             current.prev.next = news;
             news.prev = current.prev;
             news.next = prevPositionNode;
             prevPositionNode.prev = news;
             return true;
+        } else if (position == cnt + 1 ) {
+            add(value);
         } else {
             return false;
         }
+        return false;
 
     }
 
