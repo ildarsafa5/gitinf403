@@ -22,6 +22,7 @@ public class Game {
         this.finishX = finishX;
         this.finishY = finishY;
         this.finishfieldHeight =finishfieldHeight;
+        Entity.setFieldSize(fieldWidth,fieldHeight);
 
     }
 
