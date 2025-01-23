@@ -1,14 +1,15 @@
 package ru.itis.inf403;
 
-public abstract class CalculateIntegral {
-    private double a;
-    private double b;
-    private Function f;
+public abstract class AbstractCalculateIntegral {
+    protected double a;
+    protected double b;
+    protected Function f;
+    protected static final int N = 1000;
 
-    public CalculateIntegral() {
+    public AbstractCalculateIntegral() {
     }
 
-    public CalculateIntegral(double a, double b, Function f) {
+    public AbstractCalculateIntegral(double a, double b, Function f) {
         this.a = a;
         this.b = b;
         this.f = f;
