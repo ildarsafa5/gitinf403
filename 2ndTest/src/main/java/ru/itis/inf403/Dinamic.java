@@ -18,14 +18,39 @@ public class Dinamic {
                 if (i%20==0) {
                     Random random = new Random();
                     int random1 = random.nextInt(16);
-                    Call call = new Call();
-                    call.calling(elevatorChets,elevatorNeChets,elevatorForWorkers,random1);
+                    if (random1 % 2 == 0) {
+                        Random random2 = new Random();
+                        int random3 = random2.nextInt(2);
+                        switch (random3) {
+                            case 0:
+                                Call call1 = new Call(Necessity.Chet);
+                                call1.calling(elevatorChets, elevatorNeChets, elevatorForWorkers, random1);
+                                break;
+                            case 1:
+                                Call call2 = new Call(Necessity.Worker);
+                                call2.calling(elevatorChets, elevatorNeChets, elevatorForWorkers, random1);
+                                break;
+                        }
+                    } else {
+                        Random random2 = new Random();
+                        int random3 = random2.nextInt(2);
+                        switch (random3) {
+                            case 0:
+                                Call call3 = new Call(Necessity.Nechet);
+                                call3.calling(elevatorChets, elevatorNeChets, elevatorForWorkers, random1);
+                                break;
+                            case 1:
+                                Call call4 = new Call(Necessity.Worker);
+                                call4.calling(elevatorChets, elevatorNeChets, elevatorForWorkers, random1);
+                                break;
+
+                        }
+                    }
                 }
                 i++;
 
-
             } catch(NoONeAvailable e){
-                System.out.println("Все лифты заняты");
+                e.print();
             }
         }
     }

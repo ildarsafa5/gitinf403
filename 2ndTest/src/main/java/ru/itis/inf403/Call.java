@@ -2,7 +2,9 @@ package ru.itis.inf403;
 
 public class Call implements ICall {
     private Necessity necessity;
-
+    public Call(Necessity e) {
+        necessity = e;
+    }
     public void calling(ElevatorChet[] elevatorchet,ElevatorNeChet[] elevatorNeChets, ElevatorForWorker[] elevatorForWorkers,Integer floorAppointment) throws NoONeAvailable{
         if (necessity == Necessity.Chet) {
             int i1 = 0;
@@ -20,7 +22,7 @@ public class Call implements ICall {
                 }
             }
             if (!ok) {
-                throw new NoONeAvailable();
+                throw new NoONeAvailable("Все чётные лифты заняты");
             }
             elevatorchet[i1].setState(ElevatorState.GoUp);
             for (int i = 0; i < floorAppointment; i++) {
@@ -45,7 +47,7 @@ public class Call implements ICall {
                 }
             }
             if (!ok) {
-                throw new NoONeAvailable();
+                throw new NoONeAvailable("Все нечётные лифты заняты");
             }
             elevatorNeChets[i1].setState(ElevatorState.GoUp);
             for (int i = 0; i < floorAppointment; i++) {
@@ -69,7 +71,7 @@ public class Call implements ICall {
                 }
             }
             if (!ok) {
-                throw new NoONeAvailable();
+                throw new NoONeAvailable("Все лифты для сотрудников заняты");
             }
             elevatorForWorkers[i1].setState(ElevatorState.GoUp);
             for (int i = 0; i < floorAppointment; i++) {
@@ -77,11 +79,5 @@ public class Call implements ICall {
             }
             elevatorForWorkers[i1].setState(ElevatorState.Stay);
         }
-
-
-
-
-
-
     }
 }

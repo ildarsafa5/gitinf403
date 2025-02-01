@@ -1,7 +1,9 @@
 package ru.itis.inf403;
 
+import java.util.Random;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoONeAvailable{
         ElevatorChet[] elevatorChets = new ElevatorChet[3];
         ElevatorChet lift1 = new ElevatorChet();
         ElevatorChet lift2 = new ElevatorChet();
@@ -19,7 +21,11 @@ public class Main {
         ElevatorForWorker[] elevatorForWorkers = new ElevatorForWorker[1];
         ElevatorForWorker lift7 = new ElevatorForWorker();
         elevatorForWorkers[0] = lift7;
-        Dinamic dinamic = new Dinamic(elevatorNeChets,elevatorChets,elevatorForWorkers);
+        Dinamic dinamic1 = new Dinamic(elevatorNeChets,elevatorChets,elevatorForWorkers);
+        dinamic1.dinamic();
+        Random random = new Random();
+        int random1 = random.nextInt(2);
+        System.out.println(random1);
 
 
 
