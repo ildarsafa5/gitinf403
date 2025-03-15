@@ -1,4 +1,4 @@
-package ru.itis.inf403.model;
+package ru.itis.inf403;
 
 public class GoldenRetriever extends Dog {
     public GoldenRetriever(String name, int age, boolean isTrained) {

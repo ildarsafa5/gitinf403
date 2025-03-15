@@ -13,10 +13,10 @@ public class Main {
         searching("(^|\\s)(Л|л)юбовь(\\s|,|\\.|\\?|!|$)");
         searching("(^|\\s)(Д|д)рузья(\\s|,\\.|\\?|!|$)");
         searching("(^|\\s)(П|п)оэт(\\s|,\\.|\\?|!|$)");
-        searching("(в|В)етры.+веют");
+        searching("[вВ]етры.+веют");
         searching("(в|В)зор.+(Вст|вст|т|Т)ревожит");
         searching("(^|\\s)(м|М)ор(я|ем||е|ю|ей|ями|ях)(\\s|,\\.|\\?|!|$)");
-       System.out.println(Pattern.matches("\bJava\b","fejjie Java , xsj")); //????
+       System.out.println(Pattern.matches(".*\bJava\b.*","fejjie Java, xsj")); //????
     }
     public static void searching(String shab) throws FileNotFoundException {
             Scanner sc = new Scanner(new File("pushkin.txt"));

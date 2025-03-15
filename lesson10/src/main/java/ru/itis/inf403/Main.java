@@ -7,7 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws WrongPasswordLogin {
         User admin = new User("-gigachat@12464_46.4464","12208888", Role.ADMIN);
         User user = new User("_nekto@477_","qwerty123",Role.USER);
         User[] data = new User[2];

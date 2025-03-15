@@ -1,7 +1,5 @@
 package ru.itis.inf403;
 
-import ru.itis.inf403.model.*;
-
 public class Main {
     public static void main(String[] args) {
         Animal mainAnimal = new Animal("Main animal",10);

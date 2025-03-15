@@ -1,7 +1,5 @@
 package ru.itis.inf403;
 
-import ru.itis.inf403.model.*;
-
 public class Main {
     public static void main(String[] args) {
         Person person = new Person("Петров", "Александрович" , 88, "Сеня");

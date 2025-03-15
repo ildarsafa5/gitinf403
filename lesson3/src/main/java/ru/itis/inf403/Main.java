@@ -1,6 +1,5 @@
 package ru.itis.inf403;
 
-import ru.itis.inf403.model.Node;
 public class Main {
     public static void main(String[] args) {
         Node first = new Node((int)(Math.random()*100));

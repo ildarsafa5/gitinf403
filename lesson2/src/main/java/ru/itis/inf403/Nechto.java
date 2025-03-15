@@ -1,4 +1,4 @@
-package ru.itis.inf403.model;
+package ru.itis.inf403;
 
 import java.util.Random;
 

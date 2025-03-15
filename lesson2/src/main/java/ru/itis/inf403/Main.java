@@ -1,7 +1,5 @@
 package ru.itis.inf403;
 
-import ru.itis.inf403.model.*;
-
 
 public class Main {
     public static void main(String[] args) {
@@ -11,10 +9,9 @@ public class Main {
         int finishfieldHeight = 10;
         int finishX = 495;
         int finishY = 495;
-        Entity.setFieldSize(1000,1000);
-        Entity[] entities = new Entity[2];
-        entities[2] = new Nechto(0,0);
-        entities[1] = new Ant(0,0);
+        Entity[] entities = new Entity[4];
+        entities[3] = new Nechto(0,0);
+        entities[2] = new Ant(0,0);
         entities[1] = new Tortoise(0,0);
         entities[0] = new Elephant(0,0);
 

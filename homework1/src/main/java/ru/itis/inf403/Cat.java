@@ -1,4 +1,4 @@
-package ru.itis.inf403.model;
+package ru.itis.inf403;
 
 public class Cat extends Animal {
     protected boolean isDomestic;

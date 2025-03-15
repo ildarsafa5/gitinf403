@@ -1,4 +1,4 @@
 package ru.itis.inf403;
 
-public class NotPositiveNumber {
+public class NotPositiveNumber extends Exception {
 }

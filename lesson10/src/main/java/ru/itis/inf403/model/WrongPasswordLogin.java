@@ -1,4 +1,4 @@
 package ru.itis.inf403.model;
 
-public class WrongPasswordLogin extends RuntimeException {
+public class WrongPasswordLogin extends Exception {
 }
