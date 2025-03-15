@@ -1,6 +1,4 @@
-package ru.itis.inf403.obj1;
-
-import ru.itis.inf403.List403;
+package ru.itis.inf403;
 
 public class List403Impl<T> implements List403<T> {
     private Object[] array;
