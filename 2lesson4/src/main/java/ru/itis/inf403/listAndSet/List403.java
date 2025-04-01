@@ -1,4 +1,4 @@
-package ru.itis.inf403;
+package ru.itis.inf403.list;
 
 public interface List403<T> {
     void add(T a); // добавляет элемент в конец списка

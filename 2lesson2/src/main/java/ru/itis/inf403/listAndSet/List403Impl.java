@@ -1,15 +1,15 @@
-package ru.itis.inf403;
+package ru.itis.inf403.listAndSet;
 
 public class List403Impl<T> implements List403<T> {
-    private Object[] array;
+    private T[] array;
     private int size;
 
     public List403Impl() {
-        this.array = new Object[10];
+        this.array = (T[]) new Object[10];
         this.size = 0;
     }
     private void grow() {
-        Object[] newarray = new Object[(int)(size*1.5)];
+        T[] newarray = (T[]) new Object[(int)(size*1.5)];
         for (int i = 0; i < size; i++) {
             newarray[i] = array[i];
         }
@@ -21,7 +21,7 @@ public class List403Impl<T> implements List403<T> {
         }
         array[size++] = a;
     } // добавляет элемент в конец списка
-    public void add(int pos, Object a) throws IndexOutOfBoundsException{
+    public void add(int pos, T a) throws IndexOutOfBoundsException{
         if (pos>size-1 || pos<0) {
             throw new IndexOutOfBoundsException();
         }
@@ -38,7 +38,7 @@ public class List403Impl<T> implements List403<T> {
         if (pos>size-1 || pos<0) {
             throw new IndexOutOfBoundsException();
         }
-        T value = (T) array[pos];
+        T value = array[pos];
         for (int i = pos; i < size-1; i++) {
             array[i] = array[i+1];
         }
@@ -52,7 +52,7 @@ public class List403Impl<T> implements List403<T> {
         if (position>size-1 || position<0) {
             throw new IndexOutOfBoundsException();
         } else {
-            return (T)array[position];
+            return array[position];
         }
     } // обращение по индексу
 

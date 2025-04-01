@@ -1,4 +1,4 @@
-package ru.itis.inf403;
+package ru.itis.inf403.listAndSet;
 
 public class Main {
     public static void main(String[] args) {
