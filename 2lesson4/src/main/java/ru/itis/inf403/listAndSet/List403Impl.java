@@ -1,6 +1,8 @@
-package ru.itis.inf403.list;
+package ru.itis.inf403.listAndSet;
 
-public class List403Impl<T> implements List403<T> {
+import java.util.Comparator;
+
+public class List403Impl<T> implements List403<T>{
     private T[] array;
     private int size;
 
@@ -21,7 +23,7 @@ public class List403Impl<T> implements List403<T> {
         }
         array[size++] = a;
     } // добавляет элемент в конец списка
-    public void add(int pos, T a) throws IndexOutOfBoundsException{
+    public void add(int pos, T a) throws IndexOutOfBoundsException {
         if (pos>size-1 || pos<0) {
             throw new IndexOutOfBoundsException();
         }
@@ -63,5 +65,27 @@ public class List403Impl<T> implements List403<T> {
         }
         return s.toString();
     }
+
+    public void set(int pos1, int pos2) {
+        T temp = array[pos1];
+        array[pos1] = array[pos2];
+        array[pos2] = temp;
+    }
+
+    public void sort(Comparator<T> comparator) {
+        for (int i = size()-1; i >= 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (comparator.compare(array[i],array[j])<0) {
+                    set(i,j);
+                }
+            }
+        }
+    }
+
+
+
+
+
+
 
 }

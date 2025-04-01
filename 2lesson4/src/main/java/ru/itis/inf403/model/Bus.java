@@ -1,4 +1,4 @@
-package ru.itis.inf403;
+package ru.itis.inf403.model;
 
 public class Bus extends Transport {
     public Bus(String number, String routeNumber, String workTimeBegin, String workTimeEnd) {
@@ -16,4 +16,5 @@ public class Bus extends Transport {
                 ", workTimeEnd='" + workTimeEnd + '\'' +
                 '}';
     }
+
 }

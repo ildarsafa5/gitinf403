@@ -1,4 +1,4 @@
-package ru.itis.inf403;
+package ru.itis.inf403.model;
 
 public abstract class Transport {
     protected String number;
@@ -11,6 +11,14 @@ public abstract class Transport {
         this.routeNumber = routeNumber;
         this.workTimeBegin = workTimeBegin;
         this.workTimeEnd = workTimeEnd;
+    }
+
+    @Override
+    public boolean equals(Object a) {
+        if (number.equals(((Transport)a).getNumber())) {
+            return true;
+        }
+        return false;
     }
 
     public Transport() {}

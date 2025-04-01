@@ -1,4 +1,4 @@
-package ru.itis.inf403.list;
+package ru.itis.inf403.listAndSet;
 
 public interface Set400<T> {
     int size();

@@ -1,14 +1,14 @@
-package ru.itis.inf403.set400;
+package ru.itis.inf403;
 
 import java.lang.reflect.Array;
 
 public class Set400Impl<T> implements Set400<T> {
     private int size;
-    private Object[] array;
+    private T[] array;
 
     public Set400Impl() {
         size=0;
-        array = new Object[10];
+        array = (T[]) new Object[10];
     }
 
     public void add(T elem) {
@@ -25,7 +25,7 @@ public class Set400Impl<T> implements Set400<T> {
         for (int i = 0; i < size; i++) {
             newarray[i] = array[i];
         }
-        array = newarray;
+        array = (T[]) newarray;
     }
 
     public boolean contains(T elem) {

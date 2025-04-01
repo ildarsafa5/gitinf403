@@ -1,14 +1,14 @@
-package ru.itis.inf403.list;
+package ru.itis.inf403.listAndSet;
 
 import java.lang.reflect.Array;
 
 public class Set400Impl<T> implements Set400<T> {
     private int size;
-    private Object[] array;
+    private T[] array;
 
     public Set400Impl() {
         size=0;
-        array = new Object[10];
+        array = (T[]) new Object[10];
     }
 
     public void add(T elem) {
@@ -21,7 +21,7 @@ public class Set400Impl<T> implements Set400<T> {
     }
 
     private void grow() {
-        Object[] newarray = new Object[(int)(size*1.5)];
+        T[] newarray = (T[]) new Object[(int)(size*1.5)];
         for (int i = 0; i < size; i++) {
             newarray[i] = array[i];
         }
@@ -56,7 +56,7 @@ public class Set400Impl<T> implements Set400<T> {
     }
 
     public T[] getAll(T[] c) {
-        T[] newarray = (T[])Array.newInstance(c.getClass().componentType(),size);
+        T[] newarray = (T[]) Array.newInstance(c.getClass().componentType(),size);
         for (int i = 0; i < size; i++) {
             newarray[i] = (T) array[i];
         }

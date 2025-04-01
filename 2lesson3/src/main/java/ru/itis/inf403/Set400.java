@@ -1,4 +1,4 @@
-package ru.itis.inf403.set400;
+package ru.itis.inf403;
 
 public interface Set400<T> {
     int size();
